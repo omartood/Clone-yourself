@@ -10,8 +10,8 @@ const MEMORY_FILE = 'knowledge.mv2';
 
 export async function getMemory() {
   const mem = await use('basic', MEMORY_FILE, { 
-    readOnly: false, // validation: user wants to upload
+    readOnly: false, 
     createIfNotExists: true 
-  });
+  } as any);
   return mem;
 }

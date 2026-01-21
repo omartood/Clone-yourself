@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     const encoder = new TextEncoder();
     const readable = new ReadableStream({
       async start(controller) {
-        const words = answer.split(' ');
+        const words = (answer || "").split(' ');
         for (const word of words) {
            controller.enqueue(encoder.encode(word + ' '));
            await new Promise(r => setTimeout(r, 20)); // tiny delay for visual effect

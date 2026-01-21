@@ -54,6 +54,7 @@ export default function InputBar({ onSend, isLoading }: InputBarProps) {
   return (
     <div className="w-full bg-white p-4 pb-6 dark:bg-[#212121]">
       <div className="mx-auto max-w-3xl relative">
+        <div className="relative flex items-end w-full p-3 bg-gray-50 rounded-3xl border border-gray-200 shadow-sm dark:bg-[#2f2f2f] dark:border-gray-600/50 transition-all duration-200 ease-in-out">
           <input
             type="file"
             ref={fileInputRef}
